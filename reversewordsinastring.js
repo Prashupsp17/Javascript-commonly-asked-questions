@@ -19,3 +19,27 @@ var reverseWords = function(s) {
 };
 const s = "Let's take LeetCode contest"
 console.log(reverseWords(s));
+
+// Without In Built Method 
+
+const str = "Lets take leetcode contest";
+function sentenceReverse(str) {
+    let result = '';
+    let word = '';
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== ' ') {
+            word = str[i] + word;  // Prepend the character to reverse the word
+        } else {
+            result += word + ' ';  // Add the reversed word and a space to the result
+            word = '';             // Reset the word
+        }
+    }
+
+    // Add the last word to the result
+    result += word;
+
+    return result;
+}
+
+console.log(sentenceReverse(str));
