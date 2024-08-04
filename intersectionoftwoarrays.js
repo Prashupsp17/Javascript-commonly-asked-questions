@@ -24,6 +24,24 @@
 // 1 <= nums1.length, nums2.length <= 1000
 // 0 <= nums1[i], nums2[i] <= 1000
 
+const arr1= [1,2,2,3,4,4];
+const arr2 = [2,2,4,5,5,6,2000];
+
+function intersection(arr1,arr2){
+    let intersectionArr = [];
+    let obj = {}
+
+    for(let i=0;i<arr1.length;i++){
+        for(let j=0;j<arr2.length;j++){
+            if(arr1[i] === arr2[j] && !intersectionArr.includes(arr1[i]) ) {
+                intersectionArr.push(arr1[i]);
+            }
+        }
+    }
+    return intersectionArr;
+}
+ console.log(intersection(arr1,arr2));
+
 var intersection = function(nums1, nums2) {
     let intersectionArr = [];
     for(let i=0;i<nums1.length;i++){
