@@ -5,7 +5,7 @@ var fib = function(n){
     for(let i=2;i<=n;i++){
         arr.push(arr[i-1]+arr[i-2]);
     }
-    return arr[n];
+    return arr;
 };
 
 console.log(fib(4));
