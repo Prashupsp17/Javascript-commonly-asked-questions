@@ -39,7 +39,14 @@ const adult = arr.map((item,index) => {
         isAdult:item.age >23
     }
 })
-console.log(adult);
+// console.log(adult);
+let total = 0;
+const totalAge = arr.map(item => {
+  if(item.age){
+ total += item.age;
+  }
+})
+console.log(total);
 
 const found  = arr.find(item => item.name === "Prerna");
 console.log(found);
