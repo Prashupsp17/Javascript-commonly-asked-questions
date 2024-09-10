@@ -39,7 +39,7 @@ const adult = arr.map((item,index) => {
         isAdult:item.age >23
     }
 })
-// console.log(adult);
+console.log(adult);
 let total = 0;
 const totalAge = arr.map(item => {
   if(item.age){
@@ -49,11 +49,11 @@ const totalAge = arr.map(item => {
 console.log(total);
 
 const found  = arr.find(item => item.name === "Prerna");
-console.log(found);
+// console.log(found);
 
 // Find Occurences in a string and display like this ?
 
-const input = "geeks for geeks";
+const input ="geeks for geeks";
 
 // No of Occurences of g is : 2
 
