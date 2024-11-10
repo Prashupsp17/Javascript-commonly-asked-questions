@@ -2,14 +2,22 @@ let arr = [3,4,5,6,7,8];
 let n= 2;
 let output= [7, 8, 3, 4, 5, 6];
 
-function rotateByk(arr,n){
+function rightrotateByk(arr,n){
 
-    let output = [];
 
     for(let i=0;i<n;i++){
-        output.unshift(arr.pop());
+        arr.unshift(arr.pop());
     }
-    return output.concat(arr);
+ 
+     return arr;
+}
+// console.log(rightrotateByk(arr,n));
+
+function leftRotateByK(arr,n){
+    for(let i=0;i<n;i++){
+        arr.push(arr.shift());
+    }
+    return arr;
 
 }
-console.log(rotateByk(arr,n));
+console.log(leftRotateByK(arr,n));

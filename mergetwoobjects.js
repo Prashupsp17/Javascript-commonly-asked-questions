@@ -30,4 +30,38 @@ const result = { };
    return result;
     
 }
-console.log(output(obj3,obj4));
+// console.log(output(obj3,obj4));
+
+// const input = [
+//     { id: 1, name: 'A' },
+//     { id: 2, name: 'B' }
+// ]; 
+// let result = {};
+
+// for(let i=0;i<input.length;i++){
+//     result[input[i].id] = {name: input[i].name}
+// }
+
+// const arr = ["apple", "banana", "cherry"];
+
+// let obj = {};
+
+// for(let i=0;i<arr.length;i++){
+//     obj[arr[i]] = i;
+// }
+// console.log(obj);
+
+// 4. Array Mapping: Write a function to take an array of numbers and return an array of squared values.
+
+const arr = [1,2,3,4,5];
+
+function squares(arr){
+
+    let result = [];
+    for(let i=0;i<arr.length;i++){
+           result.push(arr[i]*arr[i]);
+    }
+    return result;
+    
+}
+console.log(squares(arr));

@@ -94,15 +94,40 @@
 //     }
 //     console.log(obj);
 
-    const fruits = ['apple', 'banana', 'orange'];
-    let obj = {};
+    // const fruits = ['apple', 'banana', 'orange'];
+    // let obj = {};
 
-    for(let i=0;i<fruits.length;i++){
-             obj[i] = fruits[i];
+    // for(let i=0;i<fruits.length;i++){
+    //          obj[i] = fruits[i];
+    // }
+
+    // console.log(obj);
+
+    const input = [
+        { name: 'A', age: 20, city: 'BLR' },
+        { name: 'B', age: 20, city: 'DEL' },
+        { name: 'C', age: 21, city: 'BLR' }
+    ];
+
+    // Output:
+//  {
+//  "BLR": [{ name: 'A', age: 20 }, { name: 'C', age: 21 }],
+//  "DEL": [{ name: 'B', age: 20 }]
+// }
+
+let obj = {};
+
+for(let i=0;i<input.length;i++){
+    let item = input[i];
+
+    if(!obj[item.city]){
+        obj[item.city] = [];
     }
 
-    console.log(obj);
+    obj[item.city].push({name:item.name,age:item.age});
+}
 
+console.log(obj);
  
 
    
