@@ -7,9 +7,12 @@
 // 5: How to manipulate DOM ?
 // 6: Redux 
 // 7 :  Tell about modules you worked on ?
-// 8: How u will get to know about resolution ?
+// 8: Event loop?
+// 9: Output Based questions on promises and setTimeout and setInterval ?
 
-// 9 : Write a program to find unique and reverse the array using inbuilt and without inbuilt?
+// 10: How u will get to know about resolution ?
+
+// 11 : Write a program to find unique and reverse the array using inbuilt and without inbuilt?
 
 //  const arr = [1,1,2,2,3,3,4,4,5,5];
 
