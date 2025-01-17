@@ -40,23 +40,25 @@ const nums = [3,0,1];
 
 // It has 0(1) time and space complexity as there is no nestedloops
 
-var missingNumber = function(nums) {
+// var missingNumber = function(nums) {
 
-    let n = nums.length;
-    let expectedSum = (n*(n+1)/2);
-    let actualSum = 0;
+//     let n = nums.length;
+//     let expectedSum = (n*(n+1)/2);
+//     let actualSum = 0;
 
-    for(let i=0;i<n;i++){
-        actualSum += nums[i];
-    }
+//     for(let i=0;i<n;i++){
+//         actualSum += nums[i];
+//     }
 
-    return expectedSum - actualSum;
-}
-console.log(missingNumber(nums));
+//     return expectedSum - actualSum;
+// }
+// console.log(missingNumber(nums));
 
-function missingelementinArray(arr,n){
+function missingelementinArray(arr){
 
-    for(let i=1;i<=n;i++){
+    let n = arr.length;
+
+    for(let i=0;i<=n;i++){
         let found = false;
 
         for(let j=0;j<arr.length;j++){
@@ -72,7 +74,7 @@ function missingelementinArray(arr,n){
     return -1;
 
 }
-const arr=[1,2,3,5,6];
+const arr=[3,0,1];
 const n = 5;
 
-console.log(missingelementinArray(arr,n));
+console.log(missingelementinArray(arr));
