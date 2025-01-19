@@ -1,37 +1,74 @@
 const arr = [3,1,5,5,7,2,7,5,9,8];
 
-
-function MostFrequentNumber(arr){
-    let obj={};
-    let max = 0
-    let mostFrequentNum = null;
-    let leastFrequentNum = null;
-
-    for(let i=0;i<arr.length;i++){
-         let num = arr[i];
-
-         if(obj[num] > 0){
-             obj[num]++;
-         }else{
-             obj[num] = 1;
-         }
+function occurencesofletter(input){
+    
+    const obj = {};
+    
+    let result = "";
+    
+    let max = 0;
+ let minOccured = Infinity;
+    let mostFrequentOccured = null;
+   let leastFrequentNum = null;
+    
+    for(let i=0;i<input.length;i++){
+        let char = input[i];
+        
+       if(obj[char] > 0){
+           obj[char]++;
+       }else{
+           obj[char] = 1;
+       }
     }
 
-    for(let num in obj){
-        if(obj[num] > max){
-            max = obj[num];
-            mostFrequentNum = num;
-        }
 
-        if (value < minOccured) {
-            minOccured = value;
-            leastFrequentNum = +key;
-        }
+for( let num in obj){
+    if(obj[num] > max){
+        max = obj[num];
+        mostFrequentOccured = num;
     }
-    return [mostFrequentNum,leastFrequentNum];
-
+    
+    if(obj[num] < minOccured){
+        minOccured = obj[num];
+        leastFrequentNum = num;
+    }
 }
-console.log(MostFrequentNumber(arr));
+    return [mostFrequentOccured,leastFrequentNum];
+    
+}
+console.log(occurencesofletter(input));
+
+// function MostFrequentNumber(arr){
+//     let obj={};
+//     let max = 0
+//     let mostFrequentNum = null;
+//     let leastFrequentNum = null;
+
+//     for(let i=0;i<arr.length;i++){
+//          let num = arr[i];
+
+//          if(obj[num] > 0){
+//              obj[num]++;
+//          }else{
+//              obj[num] = 1;
+//          }
+//     }
+
+//     for(let num in obj){
+//         if(obj[num] > max){
+//             max = obj[num];
+//             mostFrequentNum = num;
+//         }
+
+//         if (value < minOccured) {
+//             minOccured = value;
+//             leastFrequentNum = +key;
+//         }
+//     }
+//     return [mostFrequentNum,leastFrequentNum];
+
+// }
+// console.log(MostFrequentNumber(arr));
 
 
 
