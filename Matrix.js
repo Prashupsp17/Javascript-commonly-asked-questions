@@ -57,3 +57,18 @@ console.log(matrix(arr, cols));
 
 // let result = matrix(arr, cols);
 // console.log(result);
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const cols = 3;
+
+// function output(arr,cols){
+  
+  
+//   let matrix = [];
+  
+//   for(let i=0;i<arr.length;i= i+cols){
+//       matrix.push(arr.slice(i,i+cols));
+//   }
+//   return matrix;
+// }
+// console.log(output(arr,cols));
