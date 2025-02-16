@@ -16,6 +16,28 @@
 
 //  const arr = [1,1,2,2,3,3,4,4,5,5];
 
+const arr = [5,1,2,5,3,4,2,1,4,3,];
+
+
+function uniqueElement(arr){
+    
+    let obj = {};
+    
+    let result = [];
+    
+    for(let i=0;i<arr.length;i++){
+        let item = arr[i];
+        
+        if(obj[item] === undefined){
+            obj[item] = true;
+            result.push(item);
+        }
+        
+    }
+    return result;
+}
+console.log(uniqueElement(arr));
+
 // const newArr = new Set(arr);
 // console.log(newArr);
 // const uniqueArr = [...newArr];
