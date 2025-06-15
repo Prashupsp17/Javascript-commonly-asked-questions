@@ -36,8 +36,6 @@
 
 // Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
 
-const nums = [3,0,1];
-
 // It has 0(1) time and space complexity as there is no nestedloops
 
 // var missingNumber = function(nums) {
@@ -54,27 +52,43 @@ const nums = [3,0,1];
 // }
 // console.log(missingNumber(nums));
 
-function missingelementinArray(arr){
+// function missingelementinArray(arr){
 
-    let n = arr.length;
+//     let n = arr.length;
 
-    for(let i=0;i<=n;i++){
-        let found = false;
+//     for(let i=0;i<=n;i++){
+//         let found = false;
 
-        for(let j=0;j<arr.length;j++){
-            if(arr[j] === i){
-                found = true;
-                break;
-            }
-        }
-        if(!found){
-            return i;
-        }
+//         for(let j=0;j<arr.length;j++){
+//             if(arr[j] === i){
+//                 found = true;
+//                 break;
+//             }
+//         }
+//         if(!found){
+//             return i;
+//         }
+//     }
+//     return -1;
+
+// }
+// const arr=[3,0,1];
+// const n = 5;
+
+// console.log(missingelementinArray(arr));
+
+const nums = [3,0,1];
+
+var missingNumber = function(nums) {
+    let n = nums.length;
+    let totalSum = n*(n+1)/2;
+
+    let partialSum = 0;
+
+    for(let i=0;i<n;i++){
+        partialSum = partialSum +nums[i];
     }
-    return -1;
 
+    return totalSum -partialSum;
 }
-const arr=[3,0,1];
-const n = 5;
-
-console.log(missingelementinArray(arr));
+console.log(missingNumber(nums));

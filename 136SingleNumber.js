@@ -31,7 +31,7 @@
 // Each element in the array appears twice except for one element which appears only once.
 
 // My solution 
-const nums = [4,1,2,1,2];
+
 // var singleNumber = function(nums) {
 //     let obj = {}
 
@@ -54,15 +54,15 @@ const nums = [4,1,2,1,2];
 
 //    XOR solution bitwise manipulation
 
-var singleNumber = function(nums) {
-  let result = 0;
+// var singleNumber = function(nums) {
+//   let result = 0;
 
-  for(let i=0;i<nums.length;i++){
-     result ^= nums[i];
-  }
-  return result;
-};
-console.log(singleNumber(nums));
+//   for(let i=0;i<nums.length;i++){
+//      result ^= nums[i];
+//   }
+//   return result;
+// };
+// console.log(singleNumber(nums));
 
 let a = 5; // 0101
 let b = 3; // 0011
@@ -71,4 +71,14 @@ a = a ^ b; // Now a is 6 (0110)
 b = a ^ b; // Now b is 5 (0101)
 a = a ^ b; // Now a is 3 (0011)
 
-console.log(a, b);
+// console.log(a, b);
+const nums = [4,1,2,1,2];
+var singleNumber = function(nums) {
+  let xor = 0;
+
+  for(let i=0;i<nums.length;i++){
+    xor = xor ^ nums[i];
+  }
+  return xor;
+};
+console.log(singleNumber(nums));
