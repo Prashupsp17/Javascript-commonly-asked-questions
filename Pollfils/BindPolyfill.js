@@ -13,13 +13,6 @@ Function.prototype.myBind  = function(context={},args){
     if(typeof this != 'function'){
         throw new Error(this,"its not callable");
     }
-    
-    if(!Array.isArray(args)){
-        throw new Error('no as its not an array');
-    }
-    
-  
-    
     context.fn = this;
     return function(...newArgs){
         return context.fn(...args,...newArgs);
