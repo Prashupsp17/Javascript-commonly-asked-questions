@@ -1,0 +1,28 @@
+const transactions = [
+ { id: 1, category: "food", amount: 100 },
+ { id: 1, category: "travel", amount: 200 },
+ { id: 1, category: "food", amount: 50 },
+ { id: 2, category: "food", amount: 80 },
+ { id: 2, category: "shopping", amount: 300 },
+];
+
+function groupById(transactions){
+     let map = {};
+
+     for(let i=0;i<transactions.length;i++){
+        let item = transactions[i];
+
+        if(!map[item.id]){
+            map[item.id] = {};
+        }
+
+        if(!map[item.id][item.category]){
+            map[item.id][item.category] = 0;
+        }
+        map[item.id][item.category] += item.amount;
+
+     }
+
+     return map;
+}
+console.log(groupById(transactions));
