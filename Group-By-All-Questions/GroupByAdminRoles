@@ -1,0 +1,38 @@
+const users = [
+  { id: 1, name: "Alice", role: "Admin" },
+  { id: 2, name: "Bob", role: "User" },
+  { id: 3, name: "Charlie", role: "Admin" },
+  { id: 4, name: "David", role: "User" },
+  { id: 5, name: "Eva", role: "Manager" }
+];
+
+function output(users){
+
+   let map = {};
+
+   for(let i=0;i<users.length;i++){
+    let item = users[i];
+
+    if(!map[item.role]){
+        map[item.role] = []
+    }
+    map[item.role].push(item);
+       
+   }
+ return map;
+}
+console.log(output(users));
+// Expected Output:
+// {
+//   Admin: [
+//     { id: 1, name: "Alice", role: "Admin" },
+//     { id: 3, name: "Charlie", role: "Admin" }
+//   ],
+//   User: [
+//     { id: 2, name: "Bob", role: "User" },
+//     { id: 4, name: "David", role: "User" }
+//   ],
+//   Manager: [
+//     { id: 5, name: "Eva", role: "Manager" }
+//   ]
+// }
