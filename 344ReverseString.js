@@ -42,21 +42,35 @@
 // Similar Questions
 // Discussion (297)
 
-
+// Using two pointers 
 var reverseString = function(s) {
+  let l = 0;
+  let r = s.length-1;
 
-    let len = s.length;
-    let half = Math.floor(len/2);
+  while(l < r){
+    let temp = s[l];
+    s[l] = s[r];
+    s[r] = temp;
+    l++;
+    r--;
+  }
+  return s;
+};
 
-    for(let i=0;i<half;i++){
-        let temp = s[i];
-        s[i] = s[len-1-i];
-        s[len-1-i] = temp;
-    }
-    return s;
-}
+// var reverseString = function(s) {
+
+//     let len = s.length;
+//     let half = Math.floor(len/2);
+
+//     for(let i=0;i<half;i++){
+//         let temp = s[i];
+//         s[i] = s[len-1-i];
+//         s[len-1-i] = temp;
+//     }
+//     return s;
+// }
 
 
-let s = ["h","e","l","l","o"];
+// let s = ["h","e","l","l","o"];
 
-console.log(reverseString(s));
+// console.log(reverseString(s));
