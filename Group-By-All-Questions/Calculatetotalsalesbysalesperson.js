@@ -24,3 +24,6 @@ function totalSalesBySalesPerson(sales){
     return map;
 }
 console.log(totalSalesBySalesPerson(sales));
+
+OUTPUT 
+{ John: 350, Mike: 400 }
