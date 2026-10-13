@@ -1,0 +1,24 @@
+ // JavaScript Data Transformation Given input: ['sticky_notes', 'pen', 'pencil', 'sticky_notes', 'pen', 'pencil', 'pencil', 'pen'] Expected output: ['sticky_notes_2', 'pen_3', 'pencil_3']
+
+const arr = ['sticky_notes', 'pen', 'pencil', 'sticky_notes', 'pen', 'pencil', 'pencil', 'pen'] ;
+
+function getOutput(arr){
+  let map = {};
+  const result = [];
+  for(let i=0;i<arr.length;i++){
+      let item = arr[i];
+
+    if(map[item] > 0){
+      map[item]++;
+    }else{
+      map[item] = 1;
+    }
+  }
+  console.log(map);
+
+  for(let [key,value] of Object.entries(map)){
+      result.push(`${key}_${value}`);
+  }
+  return result;
+}
+console.log(getOutput(arr))
