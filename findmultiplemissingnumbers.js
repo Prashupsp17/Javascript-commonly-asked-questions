@@ -17,6 +17,33 @@ function missingnumbers(arr){
              missingNumberArr.push(i);
         }
     }
+
+    // WIhout inbuilt method set 
+    function missingNumbers(arr){
+  let max = 0;
+  let map = {};
+  let result = [];
+
+  for(let i=0;i<arr.length;i++){
+      map[arr[i]]= i;
+  }
+
+  for(let i=0;i<arr.length;i++){
+      if(arr[i] > max){
+        max = arr[i];
+      }
+  }
+
+  for(let i=1;i<=max;i++){
+       if(map[i] === undefined){
+          result.push(i);
+       }
+    
+  }
+  return result;
+  
+}
+console.log(missingNumbers(arr));
     return missingNumberArr;
     
     
